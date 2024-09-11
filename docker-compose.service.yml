@@ -1,0 +1,14 @@
+version: '3'
+services:
+  yyoj-code-sandbox:
+    container_name: yyoj-code-sandbox
+    build:
+      context: yyoj-code-sandbox
+      dockerfile: Dockerfile
+    ports:
+      - "8090:8090"
+    networks:
+      - mynetwork
+# 网络，不定义的话就是默认网络
+networks:
+  mynetwork:
